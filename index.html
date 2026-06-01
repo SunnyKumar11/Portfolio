@@ -1,0 +1,1073 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Fraunces:ital,opsz,wght@0,9..144,100;0,9..144,300;0,9..144,400;1,9..144,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- LOADER -->
+    <div id="loader">
+      <div class="loader-name" id="loader-name">
+       < Sunny Kumar /><span style="color: var(--accent)">.</span>
+      </div>
+      <div class="loader-bar-wrap">
+        <div class="loader-bar" id="loader-bar"></div>
+      </div>
+      <div class="loader-counter" id="loader-counter">000</div>
+    </div>
+
+    <!-- CUSTOM CURSOR -->
+    <div id="cursor">
+      <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect
+          x="1"
+          y="1"
+          width="30"
+          height="30"
+          rx="4"
+          fill="var(--charcoal)"
+          stroke="var(--accent)"
+          stroke-width="1.5"
+        />
+        <text
+          x="6"
+          y="22"
+          font-family="monospace"
+          font-size="14"
+          fill="var(--accent)"
+          font-weight="bold"
+        >
+          &lt;/&gt;
+        </text>
+      </svg>
+    </div>
+
+    <!-- PROJECT HOVER IMAGE -->
+    <div id="proj-hover-img"><img src="" alt="" id="proj-hover-src" /></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <a href="#" class="nav-logo">Sk<span>.</span>dev</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <a
+         href="https://mail.google.com/mail/?view=cm&fs=1&to=sunny9835240591@gmail.com"
+  target="_blank"
+  class="nav-cta"
+      >
+        Hire Me
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+      <a href="#gallery" onclick="closeMobileMenu()">Gallery</a>
+      <a href="#experience" onclick="closeMobileMenu()">Experience</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+      <a href="mailto:dharunkumar@email.com">Hire Me →</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-bg-grid"></div>
+      <div class="hero-number" aria-hidden="true">18</div>
+      <!-- <div class="hero-index reveal">
+        <span>Full Stack Developer</span>
+        <span>&amp; & Problem Solver</span>
+      </div> -->
+      <h1 class="hero-title">
+        <div class="overflow-hidden">
+          <span class="title-line block">Sunny</span>
+        </div>
+        <div class="overflow-hidden">
+          <span class="title-line block"
+            ><em class="serif-word">Kumar.</em></span
+          >
+        </div>
+        <div class="overflow-hidden">
+          <!-- <span class="title-line block outline-text">N.</span> -->
+        </div>
+      </h1>
+      <div class="hero-bottom reveal">
+        <div>
+          <div class="hero-desc">
+            Full Stack Developer focused on building responsive web applications
+            using JavaScript, React, Node.js and MongoDB. Currently seeking
+            internship and entry-level software development opportunities.
+          </div>
+          <div
+            class="hero-availability"
+            style="margin-top: 1.5rem; display: inline-flex"
+          >
+            <div class="hero-dot"></div>
+            Available for freelance projects
+          </div>
+          <div class="flex flex-wrap gap-5 mt-8">
+            <!-- Download Resume Button -->
+            <a
+              href="https://drive.google.com/file/d/1ddbPfPz7uoR85KwqcEsK1pFlaRfwyBOL/view?usp=drive_link"
+              download
+              class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-blue-600 text-white font-semibold tracking-wide transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:bg-blue-700"
+            >
+              📄 Download Resume
+            </a>
+
+            <!-- Contact Button -->
+            <a
+              href="#contact"
+              class="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-black text-black font-semibold tracking-wide transition-all duration-300 hover:bg-black hover:text-white hover:-translate-y-1 hover:shadow-xl"
+            >
+              ✉️ Contact Me
+            </a>
+          </div>
+        </div>
+        <div class="hero-index">
+          <span>Full Stack Developer</span>
+          <span>&amp; Problem Solver</span>
+        </div>
+        <div class="hero-scroll">
+          <div class="hero-scroll-line"></div>
+          <span>Scroll</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap">
+      <div class="marquee-track" id="marqueeTrack">
+        <!-- items repeated for seamless loop -->
+        <span class="marquee-item">React</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Next.js</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Node.js</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">TypeScript</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">GSAP</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Tailwind CSS</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">MongoDB</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">PostgreSQL</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Docker</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">AWS</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Figma</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Python</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">React</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Next.js</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Node.js</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">TypeScript</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">GSAP</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Tailwind CSS</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">MongoDB</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">PostgreSQL</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Docker</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">AWS</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Figma</span
+        ><span class="marquee-item marquee-sep">✦</span>
+        <span class="marquee-item">Python</span
+        ><span class="marquee-item marquee-sep">✦</span>
+      </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div>
+        <div class="section-label reveal">About Me</div>
+        <h2 class="about-title reveal">
+          Crafting<br />
+          <em>beautiful</em><br />
+          digital worlds
+        </h2>
+        <p class="about-text reveal">
+          I'm <span style="color: var(--accent)">Sunny Kumar</span>,an MCA
+          student and Full Stack Developer from Bihar. I enjoy building
+          responsive web applications and solving real-world problems through
+          code. My focus is on creating clean user interfaces, efficient backend
+          systems, and scalable web solutions.
+        </p>
+        <div class="about-stats reveal">
+          <div class="stat-box">
+            <div class="stat-num" data-count="10">0</div>
+            <div class="stat-label">Projects Built</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-num" data-count="5">0</div>
+            <div class="stat-label">Technologies Learned</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-num" data-count="100">0</div>
+            <div class="stat-label">Coding Challenges</div>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-num" data-count="2">0</div>
+            <div class="stat-label">Internships</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="about-right reveal">
+        <div class="skills-group">
+          <div class="skills-group-title">Frontend</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>HTML</span></div>
+            <div class="skill-tag"><span>JavaScript</span></div>
+            <div class="skill-tag"><span>React</span></div>
+            <!-- <div class="skill-tag"><span>Next.js</span></div> -->
+            <!-- <div class="skill-tag"><span>TypeScript</span></div> -->
+            <div class="skill-tag"><span>GSAP</span></div>
+            <div class="skill-tag"><span>Tailwind</span></div>
+            <div class="skill-tag"><span>Bootstrap</span></div>
+            <!-- <div class="skill-tag"><span>Three.js</span></div> -->
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Backend</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>Node.js</span></div>
+            <div class="skill-tag"><span>Express</span></div>
+            <!-- <div class="skill-tag"><span>Python</span></div> -->
+            <!-- <div class="skill-tag"><span>FastAPI</span></div> -->
+            <!-- <div class="skill-tag"><span>GraphQL</span></div> -->
+            <div class="skill-tag"><span>REST APIs</span></div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Infrastructure</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>MongoDB</span></div>
+            <!-- <div class="skill-tag"><span>PostgreSQL</span></div> -->
+            <!-- <div class="skill-tag"><span>Redis</span></div> -->
+            <!-- <div class="skill-tag"><span>Docker</span></div> -->
+            <!-- <div class="skill-tag"><span>AWS</span></div> -->
+            <div class="skill-tag"><span>MySQL</span></div>
+          </div>
+        </div>
+        <div class="skills-group">
+          <div class="skills-group-title">Tools & Design</div>
+          <div class="skills-tags">
+            <div class="skill-tag"><span>Figma</span></div>
+            <div class="skill-tag"><span>Git</span></div>
+            <div class="skill-tag"><span>Postman</span></div>
+            <div class="skill-tag"><span>VS Code</span></div>
+            <!-- <div class="skill-tag"><span>Linux</span></div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- opportunities -->
+    <section
+      id="opportunities"
+      class="relative py-28 px-6 lg:px-16 bg-gradient-to-b from-black via-zinc-950 to-black text-white overflow-hidden"
+    >
+      <!-- Background Glow -->
+      <div
+        class="absolute top-0 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/10 blur-[120px] rounded-full"
+      ></div>
+
+      <div class="max-w-7xl mx-auto relative z-10">
+        <!-- Section Label -->
+        <p
+          class="uppercase tracking-[0.4em] text-blue-500 text-xs font-medium mb-4"
+        >
+          Open To Opportunities
+        </p>
+
+        <!-- Heading -->
+        <div
+          class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-10 mb-16"
+        >
+          <div>
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+              Currently
+              <br />
+              <span class="italic font-light text-blue-500"> Seeking </span>
+            </h2>
+          </div>
+
+          <p class="max-w-md text-zinc-400 leading-8 text-lg">
+            Looking for opportunities to contribute, learn, and grow as a Full
+            Stack Developer through internships, freelance projects, and
+            full-time roles.
+          </p>
+        </div>
+
+        <!-- Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6">
+          <!-- Card -->
+          <div
+            class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-2xl mb-6"
+            >
+              💻
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Frontend Developer</h3>
+
+            <p class="text-zinc-400 leading-7">
+              Building responsive and interactive user interfaces using React,
+              JavaScript and Tailwind CSS.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-2xl mb-6"
+            >
+              ⚙️
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Full Stack Developer</h3>
+
+            <p class="text-zinc-400 leading-7">
+              Developing complete web applications with modern frontend and
+              backend technologies.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-2xl mb-6"
+            >
+              🚀
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Internship Roles</h3>
+
+            <p class="text-zinc-400 leading-7">
+              Seeking software development and engineering internships to gain
+              industry experience.
+            </p>
+          </div>
+
+          <!-- Card -->
+          <div
+            class="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:border-blue-500/50 hover:-translate-y-2 transition-all duration-500"
+          >
+            <div
+              class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-2xl mb-6"
+            >
+              🌎
+            </div>
+
+            <h3 class="text-xl font-semibold mb-3">Freelance Projects</h3>
+
+            <p class="text-zinc-400 leading-7">
+              Available for website development, dashboards, portfolio sites and
+              custom web solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+      <div class="projects-header">
+        <div class="reveal">
+          <div class="section-label">Selected Work</div>
+          <div class="projects-title">
+            Projects<br /><span
+              style="
+                font-family: var(--font-serif);
+                font-weight: 300;
+                font-style: italic;
+                color: var(--accent);
+              "
+              >&amp; Case Studies</span
+            >
+          </div>
+        </div>
+        <div class="projects-count reveal">03 Projects</div>
+      </div>
+
+      <div id="project-list">
+        <div
+          class="project-item reveal"
+          data-img="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+        >
+          <div class="project-num">01</div>
+          <div>
+            <div class="project-name">Portfolio Website</div>
+            <div
+              style="
+                font-family: var(--font-mono);
+                font-size: 12px;
+                color: var(--muted);
+                margin-top: 4px;
+              "
+            >
+              UI / UX Design
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">Gsap</span>
+            <span class="tech-badge">Anime.js</span>
+          </div>
+          <a href="#" class="project-link"
+            >View
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M1 13L13 1M13 1H4M13 1V10"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </div>
+
+        <div
+          class="project-item reveal"
+          data-img="https://imgs.search.brave.com/NAaS9A7tlwb22AfaTvrgwbCZNouglMKJmPtzfSX5Y78/rs:fit:500:0:1:0/g:ce/aHR0cHM6Ly9zdGF0/aWMuYWJoaWJ1cy5j/b20vd2ViL29ubGlu/ZS1idXMtYm9va2lu/Zy1zZXJ2aWNlLnBu/Zw"
+        >
+          <div class="project-num">02</div>
+          <div>
+            <div class="project-name">GasBooking Service</div>
+            <div
+              style="
+                font-family: var(--font-mono);
+                font-size: 12px;
+                color: var(--muted);
+                margin-top: 4px;
+              "
+            >
+              Full-stack platform
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">MongoDB</span>
+          </div>
+          <a href="#" class="project-link"
+            >View
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M1 13L13 1M13 1H4M13 1V10"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </div>
+
+        <div
+          class="project-item reveal"
+          data-img="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+        >
+          <div class="project-num">03</div>
+          <div>
+            <div class="project-name">E-Commerce Customer Churn</div>
+            <div
+              style="
+                font-family: var(--font-mono);
+                font-size: 12px;
+                color: var(--muted);
+                margin-top: 4px;
+              "
+            >
+              Real-time analytics dashboard with live WebSocket data
+            </div>
+          </div>
+          <div class="project-tech">
+            <span class="tech-badge">HTML</span>
+            <span class="tech-badge">JavaScript</span>
+            <span class="tech-badge">Python</span>
+            <span class="tech-badge">Tailwind CSS</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">Flask</span>
+          </div>
+          <a href="#" class="project-link"
+            >View
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+              <path
+                d="M1 13L13 1M13 1H4M13 1V10"
+                stroke="currentColor"
+                stroke-width="1.5"
+              /></svg
+          ></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY -->
+    <section id="gallery" class="bg-black text-white py-32 px-6 lg:px-16">
+      <!-- Header -->
+      <div class="max-w-7xl mx-auto mb-20">
+        <div class="flex flex-col lg:flex-row justify-between gap-12">
+          <div>
+            <p class="uppercase tracking-[0.4em] text-gray-500 text-xs mb-4">
+              Selected Works
+            </p>
+
+            <h2 class="text-5xl md:text-7xl lg:text-8xl font-bold leading-none">
+              Featured
+              <br />
+              <span class="italic font-light text-blue-500"> Projects </span>
+            </h2>
+          </div>
+
+          <div class="max-w-md">
+            <p class="text-gray-400 leading-8">
+              A collection of carefully crafted digital experiences, full-stack
+              applications, and creative interfaces focused on performance,
+              usability, and modern design.
+            </p>
+
+            <div class="flex gap-8 mt-8 text-sm">
+              <div>
+                <h4 class="text-3xl font-bold">15+</h4>
+                <p class="text-gray-500">Projects</p>
+              </div>
+
+              <div>
+                <h4 class="text-3xl font-bold">2+</h4>
+                <p class="text-gray-500">Years</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Gallery -->
+      <div class="max-w-7xl mx-auto grid md:grid-cols-2 xl:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[550px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1460925895917-afdab827c52f"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">01</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">Full Stack Development</p>
+
+            <h3 class="text-3xl font-bold">E-Commerce Platform</h3>
+
+            <p class="text-gray-300 mt-3">React • Node.js • MongoDB</p>
+          </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[700px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1551288049-bebda4e38f71"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">02</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">Machine Learning</p>
+
+            <h3 class="text-3xl font-bold">Churn Prediction AI</h3>
+
+            <p class="text-gray-300 mt-3">Python • Flask • Scikit Learn</p>
+          </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[500px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1498050108023-c5249f4df085"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">03</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">UI / UX Design</p>
+
+            <h3 class="text-3xl font-bold">Portfolio Experience</h3>
+
+            <p class="text-gray-300 mt-3">Figma • GSAP • Tailwind</p>
+          </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[700px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1556155092-490a1ba16284"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">04</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">Web Application</p>
+
+            <h3 class="text-3xl font-bold">Booking System</h3>
+
+            <p class="text-gray-300 mt-3">
+              JavaScript • Node.js • MySQL • MongoDB
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 5 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[500px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">05</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">Dashboard Design</p>
+
+            <h3 class="text-3xl font-bold">Admin Dashboard</h3>
+
+            <p class="text-gray-300 mt-3">Charts • Analytics • UX</p>
+          </div>
+        </div>
+
+        <!-- Card 6 -->
+        <div
+          class="group relative overflow-hidden rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 h-[650px]"
+        >
+          <img
+            src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+            alt="Project"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute top-6 right-6">
+            <span class="text-6xl font-bold text-white/10">06</span>
+          </div>
+
+          <div class="absolute bottom-8 left-8">
+            <p class="text-blue-400 text-sm mb-2">Student Portal</p>
+
+            <h3 class="text-3xl font-bold">Management System</h3>
+
+            <p class="text-gray-300 mt-3">CRUD • Bootstrap • MySQL</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+      <div class="section-label reveal">Education & Achievement</div>
+
+      <div class="exp-grid">
+        <div class="exp-timeline reveal">
+          <div class="exp-item">
+            <div class="exp-year">2026 — Present</div>
+            <div class="exp-role">Master of Computer Applications (MCA)</div>
+            <div class="exp-company">Galgotias University, Greater Noida</div>
+            <div class="exp-desc">
+              Currently pursuing MCA with a focus on Web Development, Full Stack
+              Development, Data Structures, and Software Engineering.
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-year">2022 — 2025</div>
+            <div class="exp-role">Bachelor's Degree (Graduation)</div>
+            <div class="exp-company">M.D. College, Patliputra University</div>
+            <div class="exp-desc">
+              Completed graduation in 2025. Built academic projects and gained
+              practical knowledge in programming, databases, and web
+              technologies.
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-year">2024 — 2025</div>
+            <div class="exp-role">Full Stack Development Training</div>
+            <div class="exp-company">Self Learning & Online Platforms</div>
+            <div class="exp-desc">
+              Learned HTML, CSS, JavaScript, Bootstrap, React, Node.js,
+              Express.js, MongoDB, and Python through projects and hands-on
+              practice.
+            </div>
+          </div>
+
+          <div class="exp-item">
+            <div class="exp-year">2025</div>
+            <div class="exp-role">Personal Projects</div>
+            <div class="exp-company">Portfolio & Web Applications</div>
+            <div class="exp-desc">
+              Developed projects including Gas Booking System, Customer Churn
+              Prediction, E-Commerce Website, Portfolio Website, and Management
+              Systems.
+            </div>
+          </div>
+        </div>
+
+        <div class="exp-right reveal">
+          <div class="exp-big-text">
+            Learning today,<br />
+            building <em>tomorrow.</em>
+          </div>
+
+          <div class="section-label">Highlights</div>
+
+          <ul class="awards-list">
+            <li class="award-item">
+              <div>
+                <div class="award-name">MCA Student</div>
+                <div class="award-org">Galgotias University</div>
+              </div>
+              <div class="award-year">Present</div>
+            </li>
+
+            <li class="award-item">
+              <div>
+                <div class="award-name">Graduation Completed</div>
+                <div class="award-org">M.D. College, Patliputra University</div>
+              </div>
+              <div class="award-year">2025</div>
+            </li>
+
+            <li class="award-item">
+              <div>
+                <div class="award-name">Full Stack Developer</div>
+                <div class="award-org">
+                  HTML, CSS, JavaScript, React, Node.js
+                </div>
+              </div>
+              <div class="award-year">2025</div>
+            </li>
+
+            <li class="award-item">
+              <div>
+                <div class="award-name">Project Developer</div>
+                <div class="award-org">
+                  Web Development & Machine Learning Projects
+                </div>
+              </div>
+              <div class="award-year">2025</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- GITHUB SECTION -->
+    <section id="github-section">
+      <div class="github-inner">
+        <div class="reveal">
+          <div class="section-label" style="color: rgba(245, 240, 232, 0.4)">
+            Open Source
+          </div>
+          <h2 class="github-title">
+            Code I've<br />put into <em>the world.</em>
+          </h2>
+          <p class="github-desc">
+            I regularly build projects to improve my development skills and
+            explore new technologies. My GitHub profile showcases web
+            development, full-stack applications, and problem-solving projects.
+          </p>
+          <a href="https://github.com" target="_blank" class="github-btn">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+              <path
+                d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"
+              />
+            </svg>
+            View GitHub Profile
+          </a>
+        </div>
+
+        <div class="reveal">
+          <div id="github-stats">
+            <div class="gh-stat">
+              <div class="gh-num" id="ghRepos">—</div>
+              <div class="gh-label">Repositories</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num" id="ghStars">—</div>
+              <div class="gh-label">Stars Earned</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num" id="ghFollowers">—</div>
+              <div class="gh-label">Followers</div>
+            </div>
+            <div class="gh-stat">
+              <div class="gh-num">1.2K</div>
+              <div class="gh-label">Contributions</div>
+            </div>
+          </div>
+
+          <div class="contribution-grid" id="contribGrid">
+            <div class="contrib-title">Contribution Activity — 2024</div>
+            <!-- generated by JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="contact-inner">
+        <div>
+          <div class="section-label reveal">Get In Touch</div>
+          <div class="contact-big reveal">
+            Let's<br />
+            <em>build</em>
+            together.
+          </div>
+          <p class="contact-sub reveal">
+            Whether you have a project in mind, want to collaborate, or just
+            want to say hello — I'm always up for a good conversation.
+          </p>
+          <div class="contact-links reveal">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=sunny9835240591@gmail.com"
+              target="_blank"
+              class="contact-link"
+            >
+              <div>
+                <div class="contact-link-name">Email</div>
+                <div class="contact-link-handle">sunny9835240591@email.com</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M1 17L17 1M17 1H4M17 1V14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+            <a href="https://github.com" target="_blank" class="contact-link">
+              <div>
+                <div class="contact-link-name">GitHub</div>
+                <div class="contact-link-handle">
+                  github.com/sunny9835240591
+                </div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M1 17L17 1M17 1H4M17 1V14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-link">
+              <div>
+                <div class="contact-link-name">LinkedIn</div>
+                <div class="contact-link-handle">
+                  linkedin.com/in/sunny9835240591
+                </div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M1 17L17 1M17 1H4M17 1V14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="contact-link">
+              <div>
+                <div class="contact-link-name">Twitter / X</div>
+                <div class="contact-link-handle">@sunny9835240591</div>
+              </div>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none">
+                <path
+                  d="M1 17L17 1M17 1H4M17 1V14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <div class="section-label">Send A Message</div>
+          <form
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify
+            style="margin-top: 2rem"
+          >
+            <div class="form-row">
+              <label class="form-label" for="fname">Your Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="name"
+                class="form-input"
+                placeholder="John Doe"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="femail">Email Address</label>
+              <input
+                type="email"
+                id="femail"
+                name="email"
+                class="form-input"
+                placeholder="john@example.com"
+                required
+              />
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="fsubject">Subject</label>
+              <input
+                type="text"
+                id="fsubject"
+                name="subject"
+                class="form-input"
+                placeholder="Project Inquiry"
+              />
+            </div>
+            <div class="form-row">
+              <label class="form-label" for="fmsg">Message</label>
+              <textarea
+                id="fmsg"
+                name="message"
+                class="form-textarea"
+                rows="4"
+                placeholder="Tell me about your project..."
+                required
+              ></textarea>
+            </div>
+            <button type="submit" class="form-submit">
+              <span>Send Message →</span>
+            </button>
+            <div
+              id="form-success"
+              style="
+                display: none;
+                font-family: var(--font-mono);
+                font-size: 12px;
+                color: green;
+                margin-top: 1rem;
+                letter-spacing: 0.05em;
+              "
+            >
+              ✓ Message sent! I'll get back to you soon.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="footer-left">© 2026 Sunny Kumar . All rights reserved.</div>
+      <div class="footer-logo">Sk<span>.</span>dev</div>
+      <div class="footer-right">
+        Built with <span style="color: red">♥</span> from Space
+      </div>
+    </footer>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
